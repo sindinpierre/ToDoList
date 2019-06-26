@@ -1,0 +1,7 @@
+html{
+    background-image: url("/pictures/background.jpg");
+}
+
+#addToDo{
+    text-align: center;
+}
