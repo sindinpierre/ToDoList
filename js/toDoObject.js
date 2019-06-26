@@ -10,6 +10,9 @@ function checkToDo(e){
         div.style.textDecoration="";
     }
 }
+function delToDo(e){
+    document.getElementById(e).remove();
+}
 
 function addToDo(){
     let toDo = document.getElementById("toDo").value;
@@ -17,7 +20,7 @@ function addToDo(){
 
     let node ='';
     node+=
-    '<div id="'+rid+'"><input type="checkbox" id="chk-'+rid+'" onclick="checkToDo(\''+rid+'\')"/><label id="text-'+rid+'">'+toDo+'</label></div>';
+    '<div id="'+rid+'"><input type="submit" id="del-'+rid+'" value="x" onclick="delToDo(\''+rid+'\')"><input type="checkbox" id="chk-'+rid+'" onclick="checkToDo(\''+rid+'\')"/><label id="text-'+rid+'">'+toDo+'</label></div>';
 
     toDoBox.insertAdjacentHTML('beforeend', node);
 
